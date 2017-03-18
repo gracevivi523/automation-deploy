@@ -9,11 +9,6 @@ yum_package 'git' do
 	action :install
 end
 
-# install ruby dependencies
-#yum_package '*ruby*' do
-#	action :install
-#end
-
 # checkout git code from github.com under /home/ec2-user
 git "/home/ec2-user/simple-sinatra-app/" do
 	repository 'https://github.com/rea-cruitment/simple-sinatra-app.git'
