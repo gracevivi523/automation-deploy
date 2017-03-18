@@ -6,7 +6,7 @@ Main idea for the automation deployment:
 	- Use awscli to create security group, traffic inbound/outbound rules, key pair on AWS console.
 	- Use knife-ec2 plugin to automatically launch an EC2 instance with Amazon AMI Linux image.
 	- Use chef to make automated-deploy the provided application, here, I use api.chef.io as my hosted chef server, so it saves the trouble and time of making chef server of my own.
-	- I already uploaded chef cookbook on chef server, in the cookbook, I do the following things which you can also review in my git repo after you download later.
+	- I already uploaded chef cookbook on chef server, in the cookbook, I do the following things which you can also review in my git repo.
 		o install git, in order to checkout the git code of simple-sinatra-app
 		o git checkout simple-sinatra-app
 		o set iptables rules, redirect request traffic from port 80 to port 3000
