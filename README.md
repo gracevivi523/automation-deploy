@@ -34,18 +34,18 @@ Some importants things you need to be done before running scripts：
 		* Click button 'Create user'
 		* Save your 'Access key ID' and 'Secret access key' carefully, we'll use these two values later in step 2 below, we shall use them to mamage our Amazon EC2 instance with knife EC2.
 		* Add inline policy for user 'rea', select 'Custom Policy', then click 'Select', input 'Policy Name' as "rea-policy", 'Policy Document' should be below,this could allow us to do opreations within EC2. Just copy and paste.
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ec2:*"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
+	{
+	    "Version": "2012-10-17",
+	    "Statement": [
+		{
+		    "Effect": "Allow",
+		    "Action": [
+			"ec2:*"
+		    ],
+		    "Resource": "*"
+		}
+	    ]
+	}
 
 For now, you will be able to follow on the following steps to start your amazing journey.
 
