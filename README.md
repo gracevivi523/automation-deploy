@@ -22,7 +22,7 @@ My working environment:
 	- knife-ec2 (0.15.0)	
 	- aws-cli/1.11.63
 
-Some importants things you need to be done before running scripts：
+Some importants things need to be done before running scripts：
 -----------------------------------
 	- Preferred review workstation: macOS
 	- Make sure your workstation have access to the Internet.
@@ -34,27 +34,26 @@ Some importants things you need to be done before running scripts：
 		* Click button 'Create user'
 		* Save your 'Access key ID' and 'Secret access key' carefully, we'll use these two values later in step 2 below, we shall use them to mamage our Amazon EC2 instance with knife EC2.
 		* Add inline policy for user 'rea', select 'Custom Policy', then click 'Select', input 'Policy Name' as "rea-policy", 'Policy Document' should be below,this could allow us to do opreations within EC2. Just copy and paste.
-	{
-	    "Version": "2012-10-17",
-	    "Statement": [
 		{
-		    "Effect": "Allow",
-		    "Action": [
-			"ec2:*"
-		    ],
-		    "Resource": "*"
+		    "Version": "2012-10-17",
+		    "Statement": [
+			{
+			    "Effect": "Allow",
+			    "Action": [
+				"ec2:*"
+			    ],
+			    "Resource": "*"
+			}
+		    ]
 		}
-	    ]
-	}
 
-For now, you will be able to follow on the following steps to start your amazing journey.
+### For now, you will be able to follow on the following steps to start your amazing journey.
 
-1. Pre packages installation
-
- 1).	Please fristly install git on your workstation, move on to 2) if you already have one.
- 2).	Make sure your working account has sudo permission. Please add it to /etc/sudoers if not, don't use root as your working account which can be risky;
- 3).	Go to your working directory, $HOME, let's say /Users/grace;
- 4).	Checkout my git source by using the following command:
+### 1. Pre packages installation
+	1).Please fristly install git on your workstation, move on to 2) if you already have one.
+	2).Make sure your working account has sudo permission. Please add it to /etc/sudoers if not, don't use root as your working account which can be risky;
+	3).Go to your working directory, $HOME, let's say /Users/grace;
+	4).Checkout my git source by using the following command:
 	
 	$ git clone https://github.com/gracevivi523/automation-deploy.git
 
@@ -62,31 +61,30 @@ For now, you will be able to follow on the following steps to start your amazing
 
 	$ $HOME/automation-deploy
 
- 5).	Run the following shell script to install pre packages(homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu.
+	5).Run the following shell script to install pre packages(homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu.
 	
 	$ cd $HOME/automation-deploy/scripts/
 	$ sh install_pre_packages.sh
 	
-2. Set aws access keys and prepare directory
-
- 1).	Export aws access keys to your current session, replace "xxxx" with your generated IAM access keys above.
+### 2. Set aws access keys and prepare directory
+	1).Export aws access keys to your current session, replace "xxxx" with your generated IAM access keys above.
 
 	$ export AWS_ACCESS_KEY_ID=xxxx
 	$ export AWS_SECRET_ACCESS_KEY=xxxx
-
- 2).	Create .ssh directory and copy aws/config to your $HOME/.aws/config
+	
+	2).Create .ssh directory and copy aws/config to your $HOME/.aws/config
 
 	$ cd $HOME/automation-deploy/scripts/
 	$ sh prepare_directory.sh
-
- 3).	Create AWS stuff, security group, key pair.
+	
+	3).Create AWS stuff, security group, key pair.
 	
         $ cd $HOME/automation-deploy/scripts/
         $ sh create_aws_stuff.sh
 
-3. Create EC2 instance and deploy the provided application 'simple-sinatra-app'
+### 3. Create EC2 instance and deploy the provided application 'simple-sinatra-app'
 
- 1).	Run create_ec2_ins_deploy.sh
+	1).Run create_ec2_ins_deploy.sh
 
 	$ cd $HOME/automation-deploy/scripts/
 	$ sh create_ec2_ins_deploy.sh
