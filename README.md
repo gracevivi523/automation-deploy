@@ -15,12 +15,6 @@ Main idea for the automation deployment:
 My working environment:
 ----------------------------------- 
 	- macOS Sierra (version 10.12.3)
-	- ruby 2.2.6
-	- python 2.7.10
-	- chefdk 1.2.22
-	- Homebrew 1.1.11
-	- knife-ec2 (0.15.0)	
-	- aws-cli/1.11.63
 
 Some importants things need to be done before running scripts：
 -----------------------------------
@@ -62,7 +56,7 @@ Some importants things need to be done before running scripts：
 
 	$ $HOME/automation-deploy
 
-	5).Run the following shell script to install pre packages(homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu. 
+	5).Run the following shell script to install pre packages to your workstation, (homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu. 
 	$ cd $HOME/automation-deploy/scripts/
 	$ sh install_pre_packages.sh
 	
