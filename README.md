@@ -7,20 +7,20 @@ Main idea for the automation deployment:
 		- Use knife-ec2 plugin to automatically launch an EC2 instance with Amazon AMI Linux image.
 		- Use chef to make automated-deploy the provided application, here, I use api.chef.io as my hosted chef server, so it saves the trouble and time of making chef server of my own.
 		- I already uploaded chef cookbook on chef server, in the cookbook, I do the following things which you can also review in my git repo after you download later.
-		o install git, in order to checkout the git code of simple-sinatra-app
-		o git checkout simple-sinatra-app
-		o set iptables rules, redirect request traffic from port 80 to port 3000
-		o start sinatra service, listening on port 3000. (there is a small issue that I can't start this service on port 80 because port is reserved under 1000,so I just use iptables to redirect 
-		to port 80)
+			o install git, in order to checkout the git code of simple-sinatra-app
+			o git checkout simple-sinatra-app
+			o set iptables rules, redirect request traffic from port 80 to port 3000
+			o start sinatra service, listening on port 3000. (there is a small issue that I can't start this service on port 80 because port is reserved under 1000,so I just use iptables to redirect to port 80)
 
 My working environment:
-	- macOS Sierra (version 10.12.3)
-	- ruby 2.2.6
-	- python 2.7.10
-	- chefdk 1.2.22
-	- Homebrew 1.1.11
-	- knife-ec2 (0.15.0)	
-	- aws-cli/1.11.63
+----------------------------------- 
+		- macOS Sierra (version 10.12.3)
+		- ruby 2.2.6
+		- python 2.7.10
+		- chefdk 1.2.22
+		- Homebrew 1.1.11
+		- knife-ec2 (0.15.0)	
+		- aws-cli/1.11.63
 
 Some importants things you need to be done before running scripts:
 	- Preferred review workstation: macOS
