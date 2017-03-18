@@ -46,7 +46,8 @@ Some importants things need to be done before running scripts：
 			}
 		    ]
 		}
-
+	- Please input your password for sudo command any time on need when there's password prompt on your terminal session, when you run the code below.
+	
 ### For now, you will be able to follow on the following steps to start your amazing journey.
 
 ### 1. Pre packages installation
@@ -61,7 +62,7 @@ Some importants things need to be done before running scripts：
 
 	$ $HOME/automation-deploy
 
-	5).Run the following shell script to install pre packages(homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu. Please input your password for sudo command any time on demand when there's password prompt.
+	5).Run the following shell script to install pre packages(homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu. 
 	$ cd $HOME/automation-deploy/scripts/
 	$ sh install_pre_packages.sh
 	
