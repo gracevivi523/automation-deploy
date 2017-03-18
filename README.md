@@ -1,4 +1,4 @@
-automation-deploy for rea pre-task interview
+utomation-deploy for rea pre-task interview
 ===================================
 
 Main idea for the automation deployment:
@@ -22,17 +22,18 @@ My working environment:
 		- knife-ec2 (0.15.0)	
 		- aws-cli/1.11.63
 
-Some importants things you need to be done before running scripts:
-	- Preferred review workstation: macOS
-	- Make sure your workstation have access to the Internet.
-	- Create an IAM user under your AWS account
-		* Go to https://console.aws.amazon.com/iam/home?#/home
-		* Click 'Users' in left navigation pane
-		* Click button 'Add user' and set user name as "rea"
-		* Select both "Access type", leave others as default, click 'Next Permissions', and then click 'Next Review'
-		* Click button 'Create user'
-		* Save your 'Access key ID' and 'Secret access key' carefully, we'll use these two values later in step 2 below, we shall use them to mamage our Amazon EC2 instance with knife EC2.
-		* Add inline policy for user 'rea', select 'Custom Policy', then click 'Select', input 'Policy Name' as "rea-policy", 'Policy Document' should be below,this could allow us to do opreations within EC2. Just copy and paste.
+Some importants things you need to be done before running scripts：
+-----------------------------------
+		- Preferred review workstation: macOS
+		- Make sure your workstation have access to the Internet.
+		- Create an IAM user under your AWS account
+			* Go to https://console.aws.amazon.com/iam/home?#/home
+			* Click 'Users' in left navigation pane
+			* Click button 'Add user' and set user name as "rea"
+			* Select both "Access type", leave others as default, click 'Next Permissions', and then click 'Next Review'
+			* Click button 'Create user'
+			* Save your 'Access key ID' and 'Secret access key' carefully, we'll use these two values later in step 2 below, we shall use them to mamage our Amazon EC2 instance with knife EC2.
+			* Add inline policy for user 'rea', select 'Custom Policy', then click 'Select', input 'Policy Name' as "rea-policy", 'Policy Document' should be below,this could allow us to do opreations within EC2. Just copy and paste.
 {
     "Version": "2012-10-17",
     "Statement": [
