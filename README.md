@@ -1,4 +1,4 @@
-utomation-deploy for rea pre-task interview
+Automation-deploy for rea pre-task interview
 ===================================
 
 Main idea for the automation deployment:
