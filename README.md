@@ -57,7 +57,7 @@ Some importants things need to be done before running scripts：
 	
 	$ git clone https://github.com/gracevivi523/automation-deploy.git
 
-	Now, you should see your working directory like this
+##### Now, you should see your working directory like this
 
 	$ $HOME/automation-deploy
 
@@ -79,8 +79,8 @@ Some importants things need to be done before running scripts：
 	
 	3).Create AWS stuff, security group, key pair.
 	
-        $ cd $HOME/automation-deploy/scripts/
-        $ sh create_aws_stuff.sh
+	$ cd $HOME/automation-deploy/scripts/
+	$ sh create_aws_stuff.sh
 
 ### 3. Create EC2 instance and deploy the provided application 'simple-sinatra-app'
 
