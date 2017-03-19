@@ -18,3 +18,4 @@ create_aws_config()
 
 create_ssh_dir
 create_aws_config
+echo "****** directory preparation finish, please move on ******"

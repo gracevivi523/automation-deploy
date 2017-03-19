@@ -26,15 +26,13 @@ install_homebrew_ruby()
 
 install_awscli()
 {
-	. /etc/profile
 	brew install python
         brew install awscli
 }
 
 install_knife_ec2()
 {
-	. /etc/profile
-	echo "****** your current ruby version is:" `ruby -v`;
+	echo "****** your current ruby version is:" `$ruby -v`;
 	echo "\n\n\n****** install knife-ec2 plugin start ******"
 	sudo gem install knife-ec2
 	echo "****** install knife-ec2 plugin finish *****\n\n\n"
@@ -45,10 +43,11 @@ install_chef()
 	echo "****** install chef start ******"
 	curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable
 	echo "****** install chef finish ******"
-	echo "****** your current chef version is: " `chef --version`;
+	echo "****** your current chef version is ******"
+	chef --version
 }
 
 install_homebrew_ruby
 install_awscli
-install_knife_ec2
 install_chef
+install_knife_ec2
