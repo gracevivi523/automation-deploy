@@ -56,9 +56,13 @@ Some importants things need to be done before running scripts：
 
 	$ $HOME/automation-deploy
 
-	5).Run the following shell script to install pre packages to your workstation, (homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu. 
+	5).Run the following shell script to install pre packages to your workstation, (homebrew, awscli, rbenv, ruby-build, ruby, knife-ec2, chef), this may take a while, depends on your cpu.
 	$ cd $HOME/automation-deploy/scripts/
 	$ sh install_pre_packages.sh
+	
+	Notes: Please input N when you run into this prompt below if you already have ruby-2.2.6 installed within rbenv
+	$ rbenv: /Users/grace/.rbenv/versions/2.2.6 already exists
+	$ continue with installation? (y/N) N
 	
 ### 2. Set aws access keys and prepare directory
 	1).Export aws access keys to your current session, replace "xxxx" with your generated IAM access keys above.
