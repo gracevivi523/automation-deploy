@@ -87,7 +87,7 @@ Some importants things need to be done before running scripts：
 	$ cd $HOME/automation-deploy/scripts/
 	$ sh create_ec2_ins_deploy.sh
 
-After above, when you see log INFO below, you'll be able to visit it via "http://ip" in your browser, just replace ip with public ipV4 of your newly created ec2 instance, you can find the public ipv4 on the final output when you run this deployment.
+After above, when you see log INFO below, you'll be able to visit it via "http://ip" in your browser and see output "Hello World!", just replace ip with public ipV4 of your newly created ec2 instance, you can find the public ipv4 on the final output when you run this deployment.
 
 	$ [2017-03-18 16:58:42] INFO  WEBrick 1.3.1
 	$ [2017-03-18 16:58:42] INFO  ruby 2.3.1 (2016-04-26) [x86_64-linux]
